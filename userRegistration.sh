@@ -40,3 +40,15 @@ then
 else
         echo "invalid phone number"
 fi
+
+#password validation rule 1
+read -p "User Password - " password
+pattern5="^[a-z]{8,}$"
+if [[ $password =~ $pattern5 ]]
+then
+        echo "valid password"
+else
+        echo "invalid password"
+fi
+
+
