@@ -3,7 +3,7 @@ echo "Wellcome to User Registration"
 
 #First name starts with Cap and has minimum 3 characters
 read -p "User First Name : " firstName
-pattern1='^[A-Z]{1}[a-zA-Z]{2,}$'
+pattern1="^[A-Z]{1}[a-zA-Z]{2,}$"
 if [[ $firstName =~ $pattern1 ]]
 then
         echo "valid First name"
@@ -13,10 +13,21 @@ fi
 
 #Last name starts with Cap and has minimum 3 characters
 read -p "User Last Name : " lastName
-pattern2='^[A-Z]{1}[a-zA-Z]{2,}$'
+pattern2="^[A-Z]{1}[a-zA-Z]{2,}$"
 if [[ $lastName =~ $pattern2 ]]
 then
         echo "valid Last name"
 else
         echo "invalid Last name"
 fi
+
+#email validation
+read -p "User email id : " email
+pattern3="^[a-zA-Z]{1,}([.\-+]?[a-zA-Z0-9]+)?\@[a-z0-9]{1,}\.([a-z]{2,4})(\.[a-z]{2,4})?$"
+if [[ $email =~ $pattern3 ]]
+then
+        echo "valid email id"
+else
+        echo "invalid email id"
+fi
+
