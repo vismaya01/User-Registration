@@ -43,7 +43,7 @@ fi
 
 #password validation rule 1
 read -p "User Password - " password
-pattern5="^([a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$"
+pattern5="^([a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$#%*+]).{8,}$"
 if [[ $password =~ $pattern5 ]]
 then
         echo "valid password"
